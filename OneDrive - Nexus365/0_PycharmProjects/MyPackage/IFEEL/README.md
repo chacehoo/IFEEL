@@ -1,8 +1,9 @@
 ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
 A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
-![IFEEL Illustration](https://octodex.github.com/images/yaktocat.png)
 
+
+![Image of IFEEL process](Image/FEEL.png)
 ## ⚙ Installation:
 
 `pip install -i https://test.pypi.org/simple/ ifeel`
