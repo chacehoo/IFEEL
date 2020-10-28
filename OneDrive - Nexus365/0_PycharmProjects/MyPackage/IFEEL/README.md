@@ -1,6 +1,10 @@
 ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
 A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 
+## ⚙ Installation:
+
+`pip install -i https://test.pypi.org/simple/ ifeel `
+
 ## 💡 General:
 * **Package title**: Interpretable Feature Extraction of Electricity Load (IFEEL)
 
