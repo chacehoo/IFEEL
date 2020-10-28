@@ -1,0 +1,39 @@
+## Interpretable Feature Extraction of Electricity Loads (IFEEL)
+A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
+
+## 💡 General:
+* **Package title**: Interpretable Feature Extraction of Electricity Load (IFEEL)
+
+* **Authors**: [Maomao Hu](https://maomaohu.net/), [Dongjiao Ge](https://eng.ox.ac.uk/people/dongjiao-ge/), [David Wallom](https://eng.ox.ac.uk/people/david-wallom/)
+
+* **Organization**: [Oxford e-Research Center](https://www.oerc.ox.ac.uk/), Department of Engineering Science, University of Oxford
+
+* **Contact info**: maomao.hu@eng.ox.ac.uk
+
+* **Development time**: Oct 2020
+
+* **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/).
+
+## 💬 About IFEEL:
+[1] This Python package (i.e., IFEEL) aims to help energy data analysts to easily extract interpretable features of daily electricity profiles for further machine learning purpose.
+
+[2] Two PY files (.py) are included in the IFEEL package, including Feel_transformation.py and Feel_extraction.py.
+
+[3] Two types of features can be extracted by using this package: 13 global features (GF) and 8 peak-period features (PF).
+
+[4] The 13 global features are extracted based on raw time-series data, while the 8 peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in Feel_extraction.py.
+
+[5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in Feel_transformation.py.
+
+## 👉 Notes:
+[1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/)
+
+[2] The demonstration case has been tested on Python 3.7.7
+
+## 📚 References
+[1] Hu M, Ge D, Telford R, Stephen B, Wallom, B. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. Energy.(Under review)
+
+[2] Lin J, Keogh E, Wei L, Lonardi S. Experiencing SAX: a novel symbolic representation of time series. Data Mining and Knowledge Discovery. 2007;15:107-44.
+
+[3] Keogh E, Lin J, Fu A. HOT SAX: efficiently finding the most unusual time series subsequence.  5TH IEEE International Conference on Data Mining (ICDM'05)2005. p. 8.
+
