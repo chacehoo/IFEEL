@@ -2,8 +2,9 @@
 A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
 
-
+## 📌Illustration:
 ![Image of IFEEL process](Image/FEEL.png)
+
 ## ⚙ Installation:
 
 `pip install -i https://test.pypi.org/simple/ ifeel`
