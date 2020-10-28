@@ -3,7 +3,7 @@ A python package for Interpretable Feature Extraction of Electricity Loads (IFEE
 
 ## ⚙ Installation:
 
-`pip install -i https://test.pypi.org/simple/ ifeel `
+`pip install -i https://test.pypi.org/simple/ ifeel`
 
 ## 💡 General:
 * **Package title**: Interpretable Feature Extraction of Electricity Load (IFEEL)
@@ -30,9 +30,11 @@ A python package for Interpretable Feature Extraction of Electricity Loads (IFEE
 [5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*.
 
 ## 👉 Notes:
-[1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/)
+[1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).
 
-[2] The demonstration case has been tested on Python 3.7.7
+[2] The demonstration case has been tested on Python 3.7.7.
+
+[3] A demo case can be found in the installed IFEEL package. The dataset used in the demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
 
 ## 📚 References
 [1] Hu M, Ge D, Telford R, Stephen B, Wallom, B. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
