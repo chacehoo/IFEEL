@@ -2,14 +2,14 @@
 A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
 
-## 📌Illustration:
+## 📌 Illustration:
 ![Image of IFEEL process](Image/FEEL.png)
 
 ## ⚙ Installation:
 
 `pip install -i https://test.pypi.org/simple/ ifeel`
 
-## 💡 General:
+## 🤖 Developer info:
 * **Package title**: Interpretable Feature Extraction of Electricity Load (IFEEL)
 
 * **Authors**: [Maomao Hu](https://maomaohu.net/), [Dongjiao Ge](https://eng.ox.ac.uk/people/dongjiao-ge/), [David Wallom](https://eng.ox.ac.uk/people/david-wallom/)
@@ -33,10 +33,10 @@ A python package for **Interpretable Feature Extraction of Electricity Loads** (
 
 [5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*.
 
-## 👉 Notes:
+## 🔈 Notes:
 [1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).
 
-[2] A **Demo** can be found in the installed IFEEL package or [here](https://github.com/chacehoo/IFEEL/blob/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/IFEEL/Demo_case.py). The dataset used in the demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
+[2] A **Demo** can be found in the installed IFEEL package or [here](https://github.com/chacehoo/IFEEL/blob/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/IFEEL/Demo_case.py). The dataset used in the Demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
 
 [3] The **Demo** has been tested on Python 3.7.7.
 
