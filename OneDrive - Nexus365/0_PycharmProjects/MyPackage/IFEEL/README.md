@@ -3,7 +3,9 @@ A python package for **Interpretable Feature Extraction of Electricity Loads** (
 
 
 ## 📌 Illustration:
-![Image of IFEEL process](Image/FEEL.png)
+![Illustration of IFEEL process](Image/FEEL.png)
+
+**Note**: If the picture fails to load, please click [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL).
 
 ## ⚙ Installation:
 

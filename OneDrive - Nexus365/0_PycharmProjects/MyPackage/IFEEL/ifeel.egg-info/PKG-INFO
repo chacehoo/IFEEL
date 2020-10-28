@@ -1,19 +1,25 @@
 Metadata-Version: 2.1
 Name: ifeel
-Version: 1.0.5
+Version: 1.0.9
 Summary: A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 Home-page: https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL
 Author: Maomao Hu
 Author-email: maomao.hu@eng.ox.ac.uk
 License: UNKNOWN
 Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
-        A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
+        A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
+        
+        
+        ## 📌 Illustration:
+        ![Illustration of IFEEL process](Image/FEEL.png)
+        
+        **Note**: If the picture fails to load, please click [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL).
         
         ## ⚙ Installation:
         
         `pip install -i https://test.pypi.org/simple/ ifeel`
         
-        ## 💡 General:
+        ## 🤖 Developer info:
         * **Package title**: Interpretable Feature Extraction of Electricity Load (IFEEL)
         
         * **Authors**: [Maomao Hu](https://maomaohu.net/), [Dongjiao Ge](https://eng.ox.ac.uk/people/dongjiao-ge/), [David Wallom](https://eng.ox.ac.uk/people/david-wallom/)
@@ -37,10 +43,10 @@ Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
         
         [5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*.
         
-        ## 👉 Notes:
+        ## 🔈 Notes:
         [1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).
         
-        [2] A **Demo** can be found in the installed IFEEL package or [here](). The dataset used in the demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
+        [2] A **Demo** can be found in the installed IFEEL package or [here](https://github.com/chacehoo/IFEEL/blob/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/IFEEL/Demo_case.py). The dataset used in the Demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
         
         [3] The **Demo** has been tested on Python 3.7.7.
         

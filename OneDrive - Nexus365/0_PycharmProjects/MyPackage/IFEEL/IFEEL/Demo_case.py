@@ -1,13 +1,13 @@
-
 import numpy as np
 import pandas as pd
 import os
-
-os.chdir('/Users/chace/OneDrive - Nexus365/0_PycharmProjects/MyPackage/IFEEL')
-os.getcwd()
-
 from IFEEL import ifeel_transformation, ifeel_extraction
 
+os.getcwd()  # get current working directory
+
+### Notes ###
+# Download test dataset (test_data_for_IFEEL.csv) from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
+# Place the downloaded "test_data_for_IFEEL.csv" under current working directory
 
 # Read data
 df_test = pd.read_csv("test_data_for_IFEEL.csv", header=0,index_col=0, parse_dates=False)
