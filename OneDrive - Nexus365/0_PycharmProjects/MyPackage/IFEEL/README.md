@@ -25,22 +25,22 @@ A python package for **Interpretable Feature Extraction of Electricity Loads** (
 * **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/).
 
 ## 💬 About IFEEL:
-[1] This Python package (i.e., IFEEL) aims to help energy data analysts to easily extract interpretable features of daily electricity profiles for further machine learning purpose.
+(1) This Python package (i.e., IFEEL) aims to help energy data analysts to easily extract interpretable features of daily electricity profiles for further machine learning purpose.
 
-[2] Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
+(2) Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
 
-[3] Two types of features can be extracted by using this package: 13 global features (GF) and 8 peak-period features (PF).
+(3) Two types of features can be extracted by using this package: 13 global features (GF) and 8 peak-period features (PF).
 
-[4] The 13 global features are extracted based on raw time-series data, while the 8 peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
+(4) The 13 global features are extracted based on raw time-series data, while the 8 peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
 
-[5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*. More details about SAX can be found in Ref [2] and Ref [3].
+(5) For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*. More details about SAX approach can be found in Ref [2] and Ref [3].
 
 ## 🔈 Notes:
-[1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).
+(1) To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).
 
-[2] A **Demo** can be found in the installed IFEEL package or [here](https://github.com/chacehoo/IFEEL/blob/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/IFEEL/Demo_case.py). The dataset used in the Demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
+(2) A **Demo** can be found in the installed IFEEL package or [here](https://github.com/chacehoo/IFEEL/blob/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/IFEEL/Demo_case.py). The dataset used in the Demo can be downloaded [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data).
 
-[3] The **Demo** has been tested on Python 3.7.7.
+(3) The **Demo** has been tested on Python 3.7.7.
 
 ## 📚 References
 [1] Hu M, Ge D, Telford R, Stephen B, Wallom, B. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
