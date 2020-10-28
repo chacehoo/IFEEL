@@ -17,13 +17,13 @@ A python package for Interpretable Feature Extraction of Electricity Loads (IFEE
 ## 💬 About IFEEL:
 [1] This Python package (i.e., IFEEL) aims to help energy data analysts to easily extract interpretable features of daily electricity profiles for further machine learning purpose.
 
-[2] Two PY files (.py) are included in the IFEEL package, including Feel_transformation.py and Feel_extraction.py.
+[2] Two PY files (.py) are included in the IFEEL package, including ifeel_transformation.py and ifeel_extraction.py.
 
 [3] Two types of features can be extracted by using this package: 13 global features (GF) and 8 peak-period features (PF).
 
-[4] The 13 global features are extracted based on raw time-series data, while the 8 peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in Feel_extraction.py.
+[4] The 13 global features are extracted based on raw time-series data, while the 8 peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in ifeel_extraction.py.
 
-[5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in Feel_transformation.py.
+[5] For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in ifeel_transformation.py.
 
 ## 👉 Notes:
 [1] To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/)
