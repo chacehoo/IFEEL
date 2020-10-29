@@ -25,26 +25,27 @@ def _get_length_sequences_where(x):
 ###################################
 #### global feature extraction ####
 ###################################
+
+feature_name_global = [
+    'Mean',
+    'Std',
+    'Max',
+    'Min',
+    'Range (i.e., max-min)',
+    'Percentage above mean',
+    'Sum of net loads during business hours',
+    'Sum of net loads during non-business hours',
+    'Skewness',
+    'Kurtosis',
+    'Mode of 5-bin histogram',
+    'Longest period above mean',
+    'Longest period of successive increase']
+
 # Class is a “template” / “blueprint” that is used to create objects.
 class feature_global(object):
 
     # Attribute references
     # Class variables shared by all instances
-    feature_name_global = [
-        'Mean',
-        'Std',
-        'Max',
-        'Min',
-        'Range (i.e., max-min)',
-        'Percentage above mean',
-        'Sum of net loads during business hours',
-        'Sum of net loads during non-business hours',
-        'Skewness',
-        'Kurtosis',
-        'Mode of 5-bin histogram',
-        'Longest period above mean',
-        'Longest period of successive increase'
-    ]
 
     # class instantiation automatically invokes __init__() for the newly-created class instance.
     # instance variables unique to each instance

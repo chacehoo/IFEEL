@@ -8,7 +8,7 @@ General:
 [5] Development time: Oct 2020
 [6] Acknowledgement: This work was financially supported by the UK Engineering and Physical Sciences Research Council
    (EPSRC) under grant (EP/S030131/1).
-[7] More info: https://test.pypi.org/project/ifeel/#description
+[7] More info: hhttps://pypi.org/project/ifeel/
 """
 
 from . import ifeel_extraction
