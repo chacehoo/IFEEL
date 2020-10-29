@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ifeel
-Version: 1.1.3
+Version: 1.1.4
 Summary: A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 Home-page: https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL
 Author: Maomao Hu
@@ -12,7 +12,7 @@ Description: <div align=center><img  src =Image/logo.png/></div>
         
         * A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
         
-        * IFEEL can be found on GitHub [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) or PyPI [ 🔗](https://pypi.org/project/ifeel/)
+        * IFEEL can be found on **GitHub** [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) (recommended, no image loading issue) or **PyPI** [ 🔗](https://pypi.org/project/ifeel/)
         
         
         ## 📌 Illustration:

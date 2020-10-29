@@ -4,7 +4,7 @@
 
 * A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
-* IFEEL can be found on GitHub [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) or PyPI [ 🔗](https://pypi.org/project/ifeel/)
+* IFEEL can be found on **GitHub** [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) (recommended, no image loading issue) or **PyPI** [ 🔗](https://pypi.org/project/ifeel/)
 
 
 ## 📌 Illustration:
