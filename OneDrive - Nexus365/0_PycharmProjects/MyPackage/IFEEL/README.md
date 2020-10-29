@@ -1,4 +1,6 @@
-## Interpretable Feature Extraction of Electricity Loads (IFEEL)![logo](Image/logo.png)
+<div align=center><img  src =Image/logo.png/></div>
+
+# Interpretable Feature Extraction of Electricity Loads (IFEEL)
 
 A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
