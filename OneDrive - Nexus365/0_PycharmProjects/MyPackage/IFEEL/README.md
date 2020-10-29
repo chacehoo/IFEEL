@@ -40,7 +40,7 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 
 (2) Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
 
-(3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs).
+(3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs). Detailed description of all features can be found in Ref [1] or the Demo file in the downloaded IFEEL package.
 
 (4) The global features are extracted based on raw time-series data, while the peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
 
@@ -54,7 +54,7 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 (3) The **Demo** has been tested on Python 3.7.7.
 
 ## 📚 References
-[1] Hu M, Ge D, Telford R, Stephen B, Wallom, B. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
+[1] Hu M, Ge D, Telford R, Stephen B, Wallom, D. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
 
 [2] Lin J, Keogh E, Wei L, Lonardi S. Experiencing SAX: a novel symbolic representation of time series. *Data Mining and Knowledge Discovery*. 2007;15:107-44.
 
