@@ -4,6 +4,31 @@ import pandas as pd
 from scipy.stats import skew, kurtosis
 import itertools
 
+feature_name_global = [
+    'Mean',
+    'Std',
+    'Max',
+    'Min',
+    'Range (i.e., max-min)',
+    'Percentage above mean',
+    'Sum of net loads during business hours',
+    'Sum of net loads during non-business hours',
+    'Skewness',
+    'Kurtosis',
+    'Mode of 5-bin histogram',
+    'Longest period above mean',
+    'Longest period of successive increase']
+
+feature_name_peak = [
+        'Peak_all: number',
+        'Peak_all: time',
+        'Peak_all: shortest interval between two peaks',
+        'Peak_all: duration',
+        'Peak_longest: occurrence time',
+        'Peak_longest: duration',
+        'Peak_longest: upward slope',
+        'Peak_longest: downward slope']
+
 # Python will not import methods whose names are with a leading underscore
 def _get_length_sequences_where(x):
     """
@@ -25,21 +50,6 @@ def _get_length_sequences_where(x):
 ###################################
 #### global feature extraction ####
 ###################################
-
-feature_name_global = [
-    'Mean',
-    'Std',
-    'Max',
-    'Min',
-    'Range (i.e., max-min)',
-    'Percentage above mean',
-    'Sum of net loads during business hours',
-    'Sum of net loads during non-business hours',
-    'Skewness',
-    'Kurtosis',
-    'Mode of 5-bin histogram',
-    'Longest period above mean',
-    'Longest period of successive increase']
 
 # Class is a “template” / “blueprint” that is used to create objects.
 class feature_global(object):
@@ -134,7 +144,6 @@ class feature_global(object):
         feature_all.append(self.global_longest_period_of_successive_increase())
         return pd.DataFrame(feature_all)
 
-
 #################################
 #### peak feature extraction ####
 #################################
@@ -188,12 +197,4 @@ def feature_peak_period(ts_sax_number, ts_sax_number_diff, alphabet_size):
                         peak_longest_slope_downward
                          ])
 
-feature_name_peak = [
-        'Peak_all: number',
-        'Peak_all: time',
-        'Peak_all: shortest interval between two peaks',
-        'Peak_all: duration',
-        'Peak_longest: occurrence time',
-        'Peak_longest: duration',
-        'Peak_longest: upward slope',
-        'Peak_longest: downward slope']
+

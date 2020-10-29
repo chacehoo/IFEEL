@@ -5,11 +5,13 @@ from IFEEL import ifeel_transformation, ifeel_extraction
 
 os.getcwd()  # get current working directory
 
-### Notes ###
+# Check the names of all global and peak-period features
+feature_name_global = ifeel_extraction.feature_name_global
+feature_name_peak = ifeel_extraction.feature_name_peak
+
+# Download and read data
 # Download test dataset (test_data_for_IFEEL.csv) from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
 # Place the downloaded "test_data_for_IFEEL.csv" under current working directory
-
-# Read data
 df_test = pd.read_csv("test_data_for_IFEEL.csv", header=0,index_col=0, parse_dates=False)
 
 # Parameter setting

@@ -1,6 +1,6 @@
 README.md
 setup.py
-IFEEL/Demo_case.py
+IFEEL/Demo.py
 IFEEL/__init__.py
 IFEEL/ifeel_extraction.py
 IFEEL/ifeel_transformation.py
