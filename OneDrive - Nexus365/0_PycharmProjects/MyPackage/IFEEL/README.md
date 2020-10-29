@@ -1,4 +1,5 @@
-## Interpretable Feature Extraction of Electricity Loads (IFEEL)
+## Interpretable Feature Extraction of Electricity Loads (IFEEL)![logo](Image/logo.png)
+
 A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
 * IFEEL on GitHub [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL)
