@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ifeel
-Version: 1.1.0
+Version: 1.1.1
 Summary: A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 Home-page: https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL
 Author: Maomao Hu
@@ -38,7 +38,7 @@ Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
         
         * **Development time**: Oct 2020
         
-        * **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/).
+        * **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), and [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/) at the University of Strathclyde.
         
         ## 💬 About IFEEL:
         (1) This Python package (i.e., IFEEL) aims to help energy data analysts to readily extract interpretable features of daily electricity profiles from a physical perspective. The extracted features can be applied for further feature-based machine learning purposes, including feature-based PCA, clustering, classification, and regression.

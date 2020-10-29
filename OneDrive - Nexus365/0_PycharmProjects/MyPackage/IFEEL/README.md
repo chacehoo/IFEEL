@@ -30,7 +30,7 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 
 * **Development time**: Oct 2020
 
-* **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/).
+* **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like to thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), and [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/) from the University of Strathclyde.
 
 ## 💬 About IFEEL:
 (1) This Python package (i.e., IFEEL) aims to help energy data analysts to readily extract interpretable features of daily electricity profiles from a physical perspective. The extracted features can be applied for further feature-based machine learning purposes, including feature-based PCA, clustering, classification, and regression.
