@@ -1,17 +1,18 @@
 Metadata-Version: 2.1
 Name: ifeel
-Version: 1.1.1
+Version: 1.1.3
 Summary: A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 Home-page: https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL
 Author: Maomao Hu
 Author-email: maomao.hu@eng.ox.ac.uk
 License: UNKNOWN
-Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
-        A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
+Description: <div align=center><img  src =Image/logo.png/></div>
         
-        * IFEEL on GitHub [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL)
+        # Interpretable Feature Extraction of Electricity Loads (IFEEL)
         
-        * IFEEL on PyPI [ 🔗](https://pypi.org/project/ifeel/)
+        * A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
+        
+        * IFEEL can be found on GitHub [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) or PyPI [ 🔗](https://pypi.org/project/ifeel/)
         
         
         ## 📌 Illustration:
@@ -38,14 +39,14 @@ Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
         
         * **Development time**: Oct 2020
         
-        * **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), and [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/) at the University of Strathclyde.
+        * **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like to thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), and [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/) from the University of Strathclyde.
         
         ## 💬 About IFEEL:
         (1) This Python package (i.e., IFEEL) aims to help energy data analysts to readily extract interpretable features of daily electricity profiles from a physical perspective. The extracted features can be applied for further feature-based machine learning purposes, including feature-based PCA, clustering, classification, and regression.
         
         (2) Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
         
-        (3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs).
+        (3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs). Detailed description of all features can be found in Ref [1] or the Demo file in the downloaded IFEEL package.
         
         (4) The global features are extracted based on raw time-series data, while the peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
         
@@ -59,7 +60,7 @@ Description: ## Interpretable Feature Extraction of Electricity Loads (IFEEL)
         (3) The **Demo** has been tested on Python 3.7.7.
         
         ## 📚 References
-        [1] Hu M, Ge D, Telford R, Stephen B, Wallom, B. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
+        [1] Hu M, Ge D, Telford R, Stephen B, Wallom, D. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
         
         [2] Lin J, Keogh E, Wei L, Lonardi S. Experiencing SAX: a novel symbolic representation of time series. *Data Mining and Knowledge Discovery*. 2007;15:107-44.
         
