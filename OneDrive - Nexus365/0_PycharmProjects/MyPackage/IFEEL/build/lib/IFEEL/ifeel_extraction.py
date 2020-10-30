@@ -1,9 +1,9 @@
-
 import numpy as np
 import pandas as pd
 from scipy.stats import skew, kurtosis
 import itertools
 
+# Names of all global and peak-period features
 feature_name_global = [
     'Mean',
     'Std',
@@ -18,6 +18,7 @@ feature_name_global = [
     'Mode of 5-bin histogram',
     'Longest period above mean',
     'Longest period of successive increase']
+# Note: the units of "Longest perid above mean" and "Longest period of successive increase" are hour, rather than the sampling interval.
 
 feature_name_peak = [
         'Peak_all: number',
@@ -29,8 +30,12 @@ feature_name_peak = [
         'Peak_longest: upward slope',
         'Peak_longest: downward slope']
 
-# Python will not import methods whose names are with a leading underscore
-def _get_length_sequences_where(x):
+# Note:
+# The units of "Peak_all: shortest interval between two peaks", "Peak_all: duration", and "Peak_longest: duration" are hour rather than the sampling interval.
+# The units of "Peak_longest: upward slope" and "Peak_longest: downward slope" are per sampling interval.
+
+
+def _get_length_sequences_where(x):   # Python will not import methods whose names are with a leading underscore
     """
     This method calculates the length of all sub-sequences where the array x is either True or 1.
     Examples:
@@ -51,17 +56,16 @@ def _get_length_sequences_where(x):
 #### global feature extraction ####
 ###################################
 
-# Class is a “template” / “blueprint” that is used to create objects.
-class feature_global(object):
+class feature_global(object):   # Class is a “template” / “blueprint” that is used to create objects.
 
     # Attribute references
     # Class variables shared by all instances
-
     # class instantiation automatically invokes __init__() for the newly-created class instance.
     # instance variables unique to each instance
-    def __init__(self, ts, ts_diff):
+    def __init__(self, ts, ts_diff, sample_interval):
         self.ts = ts
         self.ts_diff = ts_diff
+        self.sample_interval = sample_interval
 
     # a method is an action which an object is able to perform.
     def global_mean(self):
@@ -113,17 +117,19 @@ class feature_global(object):
     def global_longest_period_above_mean(self):
         # Returns the length of the longest consecutive subsequence in x that is bigger than the mean of x
         x = self.ts
+        y = self.sample_interval
         if not isinstance(x, (np.ndarray, pd.Series)):
             x = np.asarray(x)     # Convert the input to an array
-        return np.max(_get_length_sequences_where(x > np.mean(x))) if x.size > 0 else 0
+        return y*np.max(_get_length_sequences_where(x > np.mean(x))) if x.size > 0 else 0
 
     def global_longest_period_of_successive_increase(self):
         # Returns the length of the longest consecutive increase using SAX difference word (df_SAX_number_diff_pivot)
         x = self.ts_diff
+        y = self.sample_interval
         if not isinstance(x, (np.ndarray, pd.Series)):
             x = np.asarray(x)
 
-        return np.max(_get_length_sequences_where(x > 0)) if x.size > 0 else 0
+        return y*np.max(_get_length_sequences_where(x > 0)) if x.size > 0 else 0
 
     def global_all(self):
         # Get all time domain features in one function
@@ -147,11 +153,11 @@ class feature_global(object):
 #################################
 #### peak feature extraction ####
 #################################
-def feature_peak_period(ts_sax_number, ts_sax_number_diff, alphabet_size):
+def feature_peak_period(ts_sax_number, ts_sax_number_diff, alphabet_size, sample_interval):
 
     peak = alphabet_size-1
     ts_to_boolean = ts_sax_number == peak
-    peak_index_connected = np.where(ts_to_boolean)[0]  # where 返回的是个 tuple，用 [0] 获得真正的索引数组
+    peak_index_connected = np.where(ts_to_boolean)[0]  # the return of "where" function is a tuple，[0] is needed to obtain the index
 
     is_peak_exist = float(peak) in ts_sax_number.values
     if is_peak_exist==0:
@@ -165,27 +171,30 @@ def feature_peak_period(ts_sax_number, ts_sax_number_diff, alphabet_size):
         peak_longest_slope_downward = np.nan
     else:
         # Group consecutive integers in an array?
-        # 搜索不等于1的点，将其定位为断点，使用 where 返回不等于1的索引即为断点
+        # idea: search the points which are not equal to 1 and regard them as the breakpoints.
+        # Use the 'where' function to return the position of these breakpoints.
         # != means not equal
         peak_index_separated = np.split(peak_index_connected, np.where(np.diff(peak_index_connected) != 1)[0] + 1)
         peak_number = len(peak_index_separated)
-        peak_time = [np.mean(i) for i in peak_index_separated]
+        peak_time = np.array([np.mean(i) for i in peak_index_separated]) * sample_interval
 
-        if peak_number==1:
+        if peak_number == 1:
             peak_time_diff_shortest = np.nan
         else:
-            peak_time_diff_shortest = np.min(np.diff(peak_time))
+            peak_time_diff_shortest = np.min(np.diff(peak_time)) * sample_interval
 
-        peak_duration = [len(i) for i in peak_index_separated]
-        peak_longest = [i for i in peak_index_separated if len(i) == max(peak_duration)][0]  # 1) If Condition in Python List   2) if there are multiple peaks with the same length, then also take the first one
-        peak_longest_time = np.mean(peak_longest)
-        peak_longest_duration = len(peak_longest)
-        peak_longest_slope_upward = ts_sax_number_diff[peak_longest[0]]
+        peak_duration_points = np.array([len(i) for i in peak_index_separated])
+        peak_duration = peak_duration_points * sample_interval
+        peak_longest_sequence = [i for i in peak_index_separated if len(i) == max(peak_duration_points)][0]  # 1) If Condition in Python List   2) if there are multiple peaks with the same length, then also take the first one
+        peak_longest_time = np.mean(peak_longest_sequence) * sample_interval
+        peak_longest_duration = len(peak_longest_sequence) * sample_interval
+        peak_longest_slope_upward = ts_sax_number_diff[peak_longest_sequence[0]]     # peak_longest_sequence[0]: beginning point index
 
-        if peak_longest[-1] == 23:
+        number_window = 24/sample_interval
+        if peak_longest_sequence[-1] == number_window - 1:
             peak_longest_slope_downward = -1
         else:
-            peak_longest_slope_downward = ts_sax_number_diff[peak_longest[-1]+1]
+            peak_longest_slope_downward = ts_sax_number_diff[peak_longest_sequence[-1] + 1]  # peak_longest_sequence[-1]: end point index
 
     return pd.DataFrame([peak_number,
                         peak_time,

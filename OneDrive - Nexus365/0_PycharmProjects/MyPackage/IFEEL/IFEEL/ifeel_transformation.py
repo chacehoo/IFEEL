@@ -1,9 +1,8 @@
-
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
 import string
-from datetime import time
+from datetime import time, datetime
 
 def feature_transformation(df_test, alphabet_size, time_business_start, time_business_end):
     # Symbolic Aggregate ApproXimation (SAX) Transformation
@@ -15,8 +14,9 @@ def feature_transformation(df_test, alphabet_size, time_business_start, time_bus
 
     # add "is_business_hour" to the column, forming a MultiIndex
     is_busi_hour_all = []
-    for i in np.arange(0, 24):
-        t_test = time(i, 00)
+    for i in np.arange(0, df_test.shape[1]):
+        time_str = df_test.columns[i]
+        t_test = datetime.strptime(time_str, '%H:%M:%S').time()
         is_busi_hour = lambda t: t >= time(time_business_start, 00) and t <= time(time_business_end, 00)
         boolean = is_busi_hour(t_test)
         is_busi_hour_all.append(boolean)

@@ -1,6 +1,6 @@
 # This is a demonstration case, which shows how to use IFEEL to extract interpretable features of electricity loads.
-# The test dataset (test_data_for_IFEEL.csv) can be downloaded from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
-# The downloaded "test_data_for_IFEEL.csv" need to be placed under the current working directory.
+# The test dataset at different time intervals can be downloaded from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
+# The downloaded datasets need to be placed under the current working directory.
 
 import numpy as np
 import pandas as pd
@@ -14,10 +14,16 @@ feature_name_global = ifeel_extraction.feature_name_global
 feature_name_peak = ifeel_extraction.feature_name_peak
 
 # Read the downloaded data
-df_test = pd.read_csv("test_data_for_IFEEL.csv", header=0,index_col=0, parse_dates=False)
+df_test = pd.read_csv("IFEEL_test_data_1month_1hour.csv", header=0,index_col=0, parse_dates=False)
+# df_test = pd.read_csv("IFEEL_test_data_1month_30mins.csv", header=0,index_col=0, parse_dates=False)
+# df_test = pd.read_csv("IFEEL_test_data_1month_2hours.csv", header=0,index_col=0, parse_dates=False)
+
+sample_interval_in_hour = 24/df_test.shape[1]
+# note: the value of sample interval is in the unit of hour, e.g., if the interval is 30 mins, then sample_interval = 0.5.
+
 
 # Parameter setting
-# Business hours are from 9 am to 5 pm
+# Business hours here are from 9 am to 5 pm
 time_business_start = 9
 time_business_end = 17
 alphabet_size = 7    # alphabet size of SAX representation
@@ -30,7 +36,7 @@ feature_global_all_days = pd.DataFrame()
 for i in np.arange(0, df_raw.shape[0]):
     ts = df_raw.iloc[i]
     ts_diff = df_raw_diff.iloc[i]
-    feature_global_all_each = ifeel_extraction.feature_global(ts, ts_diff).global_all().T
+    feature_global_all_each = ifeel_extraction.feature_global(ts, ts_diff, sample_interval_in_hour).global_all().T
     feature_global_all_days = feature_global_all_days.append(feature_global_all_each, ignore_index=True)
 
 feature_global_all_days.columns = ifeel_extraction.feature_name_global
@@ -41,7 +47,7 @@ feature_peak_period_all_days = pd.DataFrame()
 for i in np.arange(0, df_raw.shape[0]):
     ts_sax = df_SAX_number.iloc[i]
     ts_sax_diff = df_SAX_number_diff.iloc[i]
-    feature_peak_all_each = ifeel_extraction.feature_peak_period(ts_sax, ts_sax_diff,alphabet_size).T
+    feature_peak_all_each = ifeel_extraction.feature_peak_period(ts_sax, ts_sax_diff,alphabet_size, sample_interval_in_hour).T
     feature_peak_period_all_days = feature_peak_period_all_days.append(feature_peak_all_each, ignore_index=True)
 
 feature_peak_period_all_days.columns = ifeel_extraction.feature_name_peak
