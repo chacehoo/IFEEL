@@ -4,7 +4,7 @@
 
 * A python package for **Interpretable Feature Extraction of Electricity Loads** (IFEEL)
 
-* IFEEL can be found on **GitHub** [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) (recommended, no image loading issue) or **PyPI** [ 🔗](https://pypi.org/project/ifeel/)
+* Description of IFEEL can be found on **GitHub** [🔗](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL) (*Recommended, no image loading issue*) or **PyPI** [ 🔗](https://pypi.org/project/ifeel/)
 
 
 ## 📌 Illustration:
@@ -12,7 +12,7 @@
 
 **Note**: If the picture fails to load, please click [here](https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL).
 
-## ⚙ Installation:
+## ⚙️ Installation:
 
 You can use `pip`  to easily install IFEEL with:
 
@@ -31,14 +31,14 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 
 * **Development time**: Oct 2020
 
-* **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like to thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), and [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/) from the University of Strathclyde.
+* **Acknowledgement**: This work was financially supported by the UK Engineering and Physical Sciences Research Council (EPSRC) under grant (EP/S030131/1) of [AMIDINE](https://www.amidine.net/). We also would like to thank the help from [Bruce Stephen](https://www.strath.ac.uk/staff/stephenbrucedr/), [Jethro Browell](http://www.jethrobrowell.com/), [Rory Telford](https://www.strath.ac.uk/staff/telfordrorymr/), [Stuart Galloway](https://www.strath.ac.uk/staff/gallowaystuartdr/), and [Ciaran Gilbert](https://pureportal.strath.ac.uk/en/persons/ciaran-gilbert) from the University of Strathclyde.
 
 ## 💬 About IFEEL:
 (1) This Python package (i.e., IFEEL) aims to help energy data analysts to readily extract interpretable features of daily electricity profiles from a physical perspective. The extracted features can be applied for further feature-based machine learning purposes, including feature-based PCA, clustering, classification, and regression.
 
 (2) Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
 
-(3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs). Detailed description of all features can be found in Ref [1] or the Demo file in the downloaded IFEEL package.
+(3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs). Detailed description of all features can be found in Ref [1] or the Demo file in the installed IFEEL package.
 
 (4) The global features are extracted based on raw time-series data, while the peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
 
@@ -52,7 +52,7 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 (3) The **Demo** has been tested on Python 3.7.7.
 
 ## 📚 References
-[1] Hu M, Ge D, Telford R, Stephen B, Wallom, D. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. *Energy*.(Under review)
+[1] Hu M, Ge D, Telford R, Stephen B, Wallom, D. Classification and characterization of intra-day load curves of PV and Non-PV households using interpretable feature extraction and feature-based clustering. (*In preparation*)
 
 [2] Lin J, Keogh E, Wei L, Lonardi S. Experiencing SAX: a novel symbolic representation of time series. *Data Mining and Knowledge Discovery*. 2007;15:107-44.
 

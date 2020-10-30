@@ -1,3 +1,7 @@
+# This is a demonstration case, which shows how to use IFEEL to extract interpretable features of electricity loads.
+# The test dataset (test_data_for_IFEEL.csv) can be downloaded from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
+# The downloaded "test_data_for_IFEEL.csv" need to be placed under the current working directory.
+
 import numpy as np
 import pandas as pd
 import os
@@ -5,13 +9,11 @@ from IFEEL import ifeel_transformation, ifeel_extraction
 
 os.getcwd()  # get current working directory
 
-# Check the names of all global and peak-period features
+# You can check the names of all global and peak-period features here.
 feature_name_global = ifeel_extraction.feature_name_global
 feature_name_peak = ifeel_extraction.feature_name_peak
 
-# Download and read data
-# Download test dataset (test_data_for_IFEEL.csv) from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
-# Place the downloaded "test_data_for_IFEEL.csv" under current working directory
+# Read the downloaded data
 df_test = pd.read_csv("test_data_for_IFEEL.csv", header=0,index_col=0, parse_dates=False)
 
 # Parameter setting
