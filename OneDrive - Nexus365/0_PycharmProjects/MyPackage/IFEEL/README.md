@@ -38,11 +38,11 @@ More info about `pip` can be found [here](https://pip.pypa.io/en/stable/) .
 
 (2) Two PY files (.py) are included in the IFEEL package, including *ifeel_transformation.py* and *ifeel_extraction.py*.
 
-(3) Two types of features can be extracted by using this package: 13 global features (GFs) and 8 peak-period features (PFs). Detailed description of all features can be found in Ref [1] or the Demo file in the installed IFEEL package.
+(3) Two types of features, including 13 global features (GFs) and 8 peak-period features (PFs), can be extracted by using this package. Detailed description of all features can be found in Ref [1] or the Demo file in the installed IFEEL package.
 
-(4) The global features are extracted based on raw time-series data, while the peak-period features are extracted based on symbolic representation of time series. The feature extraction process is performed by calling the functions in *ifeel_extraction.py*.
+(4) GFs are extracted based on raw time-series data, while PFs are extracted based on symbolic representation of time series data. GFs and PFs can be obtained by using `IFEEL.ifeel_extraction.feature_global` and `IFEEL.ifeel_extraction.feature_peak_period`, respectively. 
 
-(5) For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling the functions in *ifeel_transformation.py*. More details about SAX approach can be found in Ref [2] and Ref [3].
+(5) For fast peak-period feature extraction, Symbolic Aggregate approXimation (SAX) representation is first used to transform the time-series numerical patterns into alphabetical words. The feature transformation process is performed by calling `IFEEL.ifeel_transformation.feature_transformation`. More details about SAX approach can be found in Ref [2] and Ref [3].
 
 ## 🔈 Notes:
 (1) To successfully run the IFEEL, the following Python data analysis libraries need to be installed in advance: [Numpy](https://numpy.org/), [Scipy](https://www.scipy.org/), and [Pandas](https://pandas.pydata.org/).

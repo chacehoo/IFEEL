@@ -14,8 +14,8 @@ feature_name_global = ifeel_extraction.feature_name_global
 feature_name_peak = ifeel_extraction.feature_name_peak
 
 # Read the downloaded data
-df_test = pd.read_csv("IFEEL_test_data_1month_1hour.csv", header=0,index_col=0, parse_dates=False)
-# df_test = pd.read_csv("IFEEL_test_data_1month_30mins.csv", header=0,index_col=0, parse_dates=False)
+# df_test = pd.read_csv("IFEEL_test_data_1month_1hour.csv", header=0,index_col=0, parse_dates=False)
+df_test = pd.read_csv("IFEEL_test_data_1month_30mins.csv", header=0,index_col=0, parse_dates=False)
 # df_test = pd.read_csv("IFEEL_test_data_1month_2hours.csv", header=0,index_col=0, parse_dates=False)
 
 sample_interval_in_hour = 24/df_test.shape[1]
