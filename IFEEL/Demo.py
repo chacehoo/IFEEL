@@ -1,5 +1,5 @@
 # This is a demonstration case, which shows how to use IFEEL to extract interpretable features of electricity loads.
-# The test dataset at different time intervals can be downloaded from https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL/Test_Data
+# The test dataset at different time intervals can be downloaded from https://github.com/chacehoo/IFEEL/tree/main/Test_Data
 # The downloaded datasets need to be placed under the current working directory.
 
 import numpy as np

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ifeel", # Replace with your own username
-    version="1.5.0",
+    version="1.5.1",
     author="Maomao Hu",
     author_email="maomao.hu@eng.ox.ac.uk",
     description="A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)",

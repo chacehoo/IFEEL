@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ifeel
-Version: 1.5.0
+Version: 1.5.1
 Summary: A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)
 Home-page: https://github.com/chacehoo/IFEEL
 Author: Maomao Hu
