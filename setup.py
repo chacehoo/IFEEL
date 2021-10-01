@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ifeel", # Replace with your own username
-    version="1.4.0",
+    version="1.5.0",
     author="Maomao Hu",
     author_email="maomao.hu@eng.ox.ac.uk",
     description="A python package for Interpretable Feature Extraction of Electricity Loads (IFEEL)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/chacehoo/IFEEL/tree/master/OneDrive%20-%20Nexus365/0_PycharmProjects/MyPackage/IFEEL",
+    url="https://github.com/chacehoo/IFEEL",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
