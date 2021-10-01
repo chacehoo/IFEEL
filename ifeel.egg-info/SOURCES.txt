@@ -1,0 +1,10 @@
+README.md
+setup.py
+IFEEL/Demo.py
+IFEEL/__init__.py
+IFEEL/ifeel_extraction.py
+IFEEL/ifeel_transformation.py
+ifeel.egg-info/PKG-INFO
+ifeel.egg-info/SOURCES.txt
+ifeel.egg-info/dependency_links.txt
+ifeel.egg-info/top_level.txt
